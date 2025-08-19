@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tableBody = document.querySelector("#categoriesTable tbody");
   const form = document.getElementById("categoryForm");
   const modal = new bootstrap.Modal(document.getElementById("categoryModal"));
-  const lbModal = document.getElementById("categoryModalLabel");
+  const lblModal = document.getElementById("categoryModalLabel");
   const btnAdd = document.getElementById("btnAddCategory");
 
   loadCategories();
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   btnAdd.addEventListener("click", () => {
     form.reset();
     form.categoryId.value = "";
-    lbModal.textContent = "Agregar Categoría";
+    lblModal.textContent = "Agregar Categoría";
     modal.show();
   });
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
           form.categoryId.value = cat.idCategoria;
           form.categoryName.value = cat.nombreCategoria;
           form.categoryDescription.value = cat.descripcion;
-          lbModal.textContent = "Editar Categoría";
+          lblModal.textContent = "Editar Categoría";
           modal.show();
         });
 
